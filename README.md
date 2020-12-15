@@ -21,27 +21,27 @@ MySQL 8.0+ (Tested on Workbench CE 8.0)
 ### Project Description
 The SCM approach has following functional requirement:
 
-• **Organization** – unique identity in the system – name, description, email address. 
-• **User** – can be part of an organisation – unique identity in the system – consists of their avatar, name, email address, description, followers, and following. 
-• **Repo** – unique identity (referred when forked), name of the repository, username who owns it (can be an organization), date of initialization, visibility parameter (public/private), reference (branch, tags), contributors on the repo. 
-• **Branch** – unique identity of branch, name of branch, last commit on that branch, time of update. 
-• **Tag** – unique identity of tag, name of tag, last commit on that branch, create date. 
-• **Commit** – unique identity as SHA, author of the commit, committed by user, date of commit, title of the commit, parent commit, author of commit (user committing else’s commit). 
-• **Patch** – unique index (based on the git diff), name of old blob (in case of rename), name of new file, changes made by additions and deletion of lines of code. 
-• **Pull Request** – if a commit is made on other user’s repo – this request is generated – have a unique identity, name of the repo, author of the commit, status of pull request, date of creation, date of closure (when status is updated). 
-• **Issue** – if any user faces a problem in the working of a code – an issue can be raised in the repo – unique identity, author of the issue raised, status of issue, title, description of the issue, date of creation. 
-• **Comment** – corresponding to a commit, pull request or an issue – has a unique identity, comment content, date of creation, author of the comment.
+- **Organization** – unique identity in the system – name, description, email address. 
+- **User** – can be part of an organisation – unique identity in the system – consists of their avatar, name, email address, description, followers, and following. 
+- **Repo** – unique identity (referred when forked), name of the repository, username who owns it (can be an organization), date of initialization, visibility parameter (public/private), reference (branch, tags), contributors on the repo. 
+- **Branch** – unique identity of branch, name of branch, last commit on that branch, time of update. 
+- **Tag** – unique identity of tag, name of tag, last commit on that branch, create date. 
+- **Commit** – unique identity as SHA, author of the commit, committed by user, date of commit, title of the commit, parent commit, author of commit (user committing else’s commit). 
+- **Patch** – unique index (based on the git diff), name of old blob (in case of rename), name of new file, changes made by additions and deletion of lines of code. 
+- **Pull Request** – if a commit is made on other user’s repo – this request is generated – have a unique identity, name of the repo, author of the commit, status of pull request, date of creation, date of closure (when status is updated). 
+- **Issue** – if any user faces a problem in the working of a code – an issue can be raised in the repo – unique identity, author of the issue raised, status of issue, title, description of the issue, date of creation. 
+- **Comment** – corresponding to a commit, pull request or an issue – has a unique identity, comment content, date of creation, author of the comment.
 
 ### ER Diagram
 
-![ERD for SCM](https://github.com/rohantaneja/git-scm-db/raw/master/img/ER.png)
+![ERD for SCM](https://raw.githubusercontent.com/rohantaneja/git-scm-db/main/img/ER.png)
 
 ### Mapping to Relational Schema
 
-![Mapping ERD to Relational Schema](https://github.com/rohantaneja/git-scm-db/raw/master/img/RD.png)
+![Mapping ERD to Relational Schema](https://raw.githubusercontent.com/rohantaneja/git-scm-db/main/img/RS.png)
 
 ### Functional Dependency
-![Functional Dependency of the Project](https://github.com/rohantaneja/git-scm-db/raw/master/img/FD.png)
+![Functional Dependency of the Project](https://raw.githubusercontent.com/rohantaneja/git-scm-db/main/img/FD.png)
 
 ### Semantic Constraints
 ```sql
@@ -248,7 +248,7 @@ FOREIGN KEY (Comment) REFERENCES Comment(comment_id) ON UPDATE CASCADE
 # End Creating Tables
 ```
 
-### 3.2 Populating Database
+### Populating Database
 
 These are some demo values. Full data will be updated in future commits
 
